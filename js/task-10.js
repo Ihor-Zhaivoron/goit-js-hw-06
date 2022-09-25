@@ -27,3 +27,31 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+const ref = {
+  input: document.querySelector('input'),
+  btnCreateElement: document.querySelector('[data-create]'),
+  btnDestroyElements: document.querySelector('[data-destroy]'),
+  divBoxes: document.querySelector('#boxes'),
+};
+
+ref.btnCreateElement.addEventListener('click', createBoxes);
+
+function createBoxes() {
+  const amount = ref.input.value || 0;
+  let sizes = 30;
+  let arrElements = '';
+  for (let i = 0; i < amount; i += 1) {
+    const randomColor = getRandomHexColor();
+    arrElements += `<div style="width: ${sizes}px; height: ${sizes}px; background-color: ${randomColor}"></div>`;
+    sizes += 10;
+  }
+  ref.divBoxes.insertAdjacentHTML('afterbegin', arrElements);
+}
+
+ref.btnDestroyElements.addEventListener('click', destroyBoxes);
+
+function destroyBoxes() {
+  ref.divBoxes.innerHTML = '';
+  ref.input.value = '';
+}
