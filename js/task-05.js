@@ -7,13 +7,13 @@
 // < input type = "text" id = "name-input" placeholder = "Please enter your
 // name" />
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
-// const inputName = document.querySelector('#name-input');
-// const spanName = document.querySelector('#name-output');
+const inputName = document.querySelector('#name-input');
+const spanName = document.querySelector('#name-output');
 
-// inputName.addEventListener('input', () => {
-//   if (inputName.value.trim()) {
-//     spanName.textContent = inputName.value.trim();
-//   } else {
-//     spanName.textContent = 'Anonymous';
-//   }
-// });
+inputName.addEventListener('input', () => {
+  if (inputName.value.trim()) {
+    spanName.textContent = inputName.value.trim();
+  } else {
+    spanName.textContent = 'Anonymous';
+  }
+});
