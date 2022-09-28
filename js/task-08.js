@@ -20,9 +20,9 @@
 // поля буде ім'ям властивості, а значення поля - значенням властивості. Для доступу до елементів
 //  форми використовуй властивість elements.
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
-// const loginForm = document.querySelector('.login-form');
+const loginForm = document.querySelector('.login-form');
 
-// loginForm.addEventListener('submit', sentForm);
+loginForm.addEventListener('submit', sentForm);
 
 function sentForm(event) {
   event.preventDefault();

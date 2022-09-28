@@ -5,7 +5,7 @@
 
 // JavaScript містить масив рядків.
 
-// const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
+const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
 
 // Напиши скрипт, який для кожного елемента масиву ingredients:
 
@@ -17,10 +17,10 @@
 const ingredientsList = document.querySelector('#ingredients');
 
 const ingredientsItems = ingredients.map(ingredient => {
-  const ingredientsEl = ingredient.createElement('li');
+  const ingredientsEl = document.createElement('li');
   ingredientsEl.classList.add('item');
   ingredientsEl.textContent = ingredient;
 
   return ingredientsEl;
 });
-ingredientsList.append(...ingredientsEl);
+ingredientsList.append(...ingredientsItems);
