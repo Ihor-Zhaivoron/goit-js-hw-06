@@ -26,9 +26,12 @@ loginForm.addEventListener('submit', sentForm);
 
 function sentForm(event) {
   event.preventDefault();
+
   const currentElement = event.currentTarget.elements;
+
   if (!currentElement.email.value || !currentElement.password.value) {
     alert('Всі поля повинні бути заповнені!');
+    return;
   }
   const dataForm = {
     email: currentElement.email.value,
